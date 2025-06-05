@@ -285,6 +285,7 @@ const Computers = ({ isMobile }) => {
     return null; // Or render a simple box, or let Suspense handle it
   }
 
+
   return (
     <mesh>
       {/* Lights for the scene */}
