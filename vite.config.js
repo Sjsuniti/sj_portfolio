@@ -11,7 +11,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/sj_portfolio/', // your existing base path
+  base: './', // your existing base path
   plugins: [react()],
   build: {
     rollupOptions: {
