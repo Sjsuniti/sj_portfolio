@@ -81,7 +81,10 @@ const Hero = () => {
       </div>
 
       {/* 3D Canvas */}
-      <ComputersCanvas />
+<div className='absolute inset-0 top-[10px] w-full h-full flex justify-center items-end pointer-events-none'>
+  <ComputersCanvas />
+</div>
+
 
       {/* Scroll Indicator */}
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
@@ -141,3 +144,12 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+// The 3D computer model is rendering correctly now.
+
+// But it's positioned too high, detached from the hero content, and appears more prominent than needed.
+
+// There’s an awkward gap between the main text ("I create dynamic apps...") and the model.
+

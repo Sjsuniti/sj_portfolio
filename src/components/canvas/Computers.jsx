@@ -243,7 +243,7 @@ import CanvasLoader from "../Loader"; // Assuming this path is correct
 const Computers = ({ isMobile }) => {
   // Load the GLTF model. Make sure the path is correct relative to your public folder.
   // If your project is served from '/sj_portfolio/', then '/sj_portfolio/desktop_pc/scene.gltf' is correct.
-  const computer = useGLTF("/sj_portfolio/desktop_pc/scene.gltf");
+  const computer = useGLTF("/desktop_pc/scene.gltf");
 
   // Optional: enable wireframe mode for debugging and check for NaN values
   useEffect(() => {
