@@ -369,7 +369,7 @@ import * as THREE from "three"; // For potential debugging
 import CanvasLoader from "../Loader"; // Adjust the path if necessary
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("/sj_portfolio/desktop_pc/scene.gltf");
+  const computer = useGLTF("./desktop_pc/scene.gltf");
 
   useEffect(() => {
     if (computer && computer.scene) {
