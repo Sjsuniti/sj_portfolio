@@ -40,9 +40,10 @@ const SectionWrapper = (Component, idName) =>
         viewport={{ once: true, amount: 0.25 }}
         className={`px-6 sm:px-16 pb-10 max-w-7xl mx-auto relative z-0`} // Removed top padding
       >
-        <span className='hash-span' id={idName}>
-          &nbsp;
-        </span>
+    <section id="about" className="your-section-class">
+  {/* Your About section content */}
+</section>
+
 
         <Component />
       </motion.section>

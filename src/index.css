@@ -46,11 +46,15 @@
 
 
 
-.hash-span {
+/*.hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
   display: block;
+} */
+html {
+  scroll-padding-top: 100px;
 }
+
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
