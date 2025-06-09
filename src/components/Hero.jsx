@@ -60,7 +60,7 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className='relative w-full h-screen mx-auto'>
+    <section className=' relative w-full h-screen mx-auto'>
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -81,9 +81,10 @@ const Hero = () => {
       </div>
 
       {/* 3D Canvas */}
-<div className='absolute inset-0 top-[10px] w-full h-full flex justify-center items-end pointer-events-none'>
+<div className="absolute inset-0 w-full h-full z-0">
   <ComputersCanvas />
 </div>
+
 
 
       {/* Scroll Indicator */}
@@ -145,11 +146,4 @@ const Hero = () => {
 
 export default Hero;
 
-
-
-// The 3D computer model is rendering correctly now.
-
-// But it's positioned too high, detached from the hero content, and appears more prominent than needed.
-
-// There’s an awkward gap between the main text ("I create dynamic apps...") and the model.
 
