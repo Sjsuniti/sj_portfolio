@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/sj_portfolio/', // <-- set this to your repo name or your app's subfolder
+  base: '/', // <-- set this to your repo name or your app's subfolder
   plugins: [react()],
 })
 
