@@ -4,7 +4,7 @@ import {
     creator,
     web,
     javascript,
-    postman,
+   
     html,
     css,
     reactjs,
@@ -70,10 +70,7 @@ import {
       name: "JavaScript",
       icon: javascript,
     },
-    {
-      name: "Postman",
-      icon: postman,
-    },
+ 
     {
       name: "React JS",
       icon: reactjs,
