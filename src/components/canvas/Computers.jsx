@@ -427,6 +427,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
+    style={{ width: "100%", height: "100%", display: "block" }}
       frameloop="always"
       shadows
       dpr={[1, 2]}

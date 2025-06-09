@@ -81,8 +81,12 @@ const Hero = () => {
       </div>
 
       {/* 3D Canvas */}
-<div className="absolute inset-0 w-full h-full z-0">
-  <ComputersCanvas />
+{/* 3D Canvas */}
+<div className="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+ <div className="w-full h-full min-h-[500px] transition-all duration-500 ease-in-out">
+"
+    <ComputersCanvas />
+  </div>
 </div>
 
 
