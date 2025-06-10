@@ -1,53 +1,61 @@
-import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { staggerContainer } from '../utils/motion';
-import About from '../components/About';
-
-const SectionWrapper = (Component, idName) =>
-function HOC() {
-    return(
-        <motion.section 
-        variants={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
-        >
-          <span className='hash-span' id={idName}>
-            &nbsp;
-
-          </span>
-            <Component />
-        </motion.section>
-    )
-}
-
-
-export default SectionWrapper;
-
-
 // import { motion } from 'framer-motion';
 // import { styles } from '../styles';
 // import { staggerContainer } from '../utils/motion';
+// import About from '../components/About';
 
 // const SectionWrapper = (Component, idName) =>
-//   function HOC() {
-//     return (
-//       <motion.section
+// function HOC() {
+//     return(
+//         <motion.section 
 //         variants={staggerContainer()}
 //         initial="hidden"
 //         whileInView="show"
 //         viewport={{ once: true, amount: 0.25 }}
-//         className={`px-6 sm:px-16 pb-10 max-w-7xl mx-auto relative z-0`} // Removed top padding
-//       >
-//     <section id="about" className="your-section-class">
-//   {/* Your About section content */}
-// </section>
+//         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+//         >
+//           <span className='hash-span' id={idName}>
+//             &nbsp;
 
+//           </span>
+//             <Component />
+//         </motion.section>
+//     )
+// }
 
-//         <Component />
-//       </motion.section>
-//     );
-//   };
 
 // export default SectionWrapper;
+
+// src/hoc/SectionWrapper.jsx
+import { motion } from 'framer-motion'
+import { styles } from '../styles'
+import { staggerContainer } from '../utils/motion'
+
+const SectionWrapper = (Component, idName) => {
+  return function HOC() {
+    return (
+      <motion.section
+        id={idName}                              // ← move the id here
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className={`
+          ${styles.padding}
+          max-w-7xl
+          mx-auto
+          relative
+          z-0
+          scroll-mt-[120px]                      /* ↑ give an offset if you have a sticky header */
+        `}
+      >
+        <Component />
+      </motion.section>
+    )
+  }
+}
+
+export default SectionWrapper
+
+
+
+
